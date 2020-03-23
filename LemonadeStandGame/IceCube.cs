@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame
 {
-    class Day
+    class IceCube
     {
-
     }
 }
