@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame
 {
-    class IceCube : Item
+    abstract class Item
     {
-        public IceCube()
+        public string name;
+
+        static Item()
         {
-            name = "ice cube";
+
         }
     }
 }

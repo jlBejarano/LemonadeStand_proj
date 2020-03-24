@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame
 {
-    class UserInterface
+    static class UserInterface
     {
+        public static int GetNumberOfItems(string itemsToGet)
+        {
+            bool userInputIsAnInteger = false;
+            int quantityOfItem = -1;
+
+            while (!userInputIsAnInteger || quantityOfItem < 0)
+            {
+                Console.WriteLine("How Many " + itemsToGet + " wouold you like to buy?");
+                Console.WriteLine("Please enter a positive integer (or 0 to cancel):");
+
+                userInputIsAnInteger = Int32.TryParse(Console.ReadLine(), out quantityOfTime);
+            }
+
+            return quantityOfTime;
+        }
+
     }
 }

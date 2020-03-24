@@ -8,6 +8,15 @@ namespace LemonadeStandGame
 {
     class Day
     {
+        
+        public Weather weather;
+        public Customer customer;
+        Random random = new Random();
+        public Day()
+        {
+            customer = new Customer();
+            weather = new Weather();
+        }
 
     }
 }
