@@ -18,10 +18,10 @@ namespace LemonadeStandGame
                 Console.WriteLine("How Many " + itemsToGet + " wouold you like to buy?");
                 Console.WriteLine("Please enter a positive integer (or 0 to cancel):");
 
-                userInputIsAnInteger = Int32.TryParse(Console.ReadLine(), out quantityOfTime);
+                userInputIsAnInteger = Int32.TryParse(Console.ReadLine(), out quantityOfItem);
             }
 
-            return quantityOfTime;
+            return quantityOfItem;
         }
 
     }

@@ -35,7 +35,7 @@ namespace LemonadeStandGame
         public void SellLemons(Player player)
         {
             int lemonsToPurchase = UserInterface.GetNumberOfItems("lemons");
-            double transactionAmount = CalulateTransactionAmount(lemonsToPurchase, pricePerLemon);
+            double transactionAmount = CalculateTransactionAmount(lemonsToPurchase, pricePerLemon);
             if(player.wallet.Money >= transactionAmount)
             {
                 PerformTransaction(player.wallet, transactionAmount);
@@ -64,6 +64,17 @@ namespace LemonadeStandGame
                 player.inventory.AddSugarCubesToInventory(sugarCubesToPurchase);
 
             }
+        }
+
+        private double CalculateTransactionAmount(int itemCount, double itemPricePerUnit)
+        {
+            double transactionAmount = itemCount * itemPricePerUnit;
+            return transactionAmount;
+        }
+
+        private void PerformTransaction(Wallet wallet, double transactionAmount)
+        {
+            wallet.PayMoneyForItems(transactionAmount);
         }
 
     }
