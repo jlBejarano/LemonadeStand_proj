@@ -8,5 +8,14 @@ namespace LemonadeStandGame
 {
     class Customer
     {
+        public string name;
+        public int customers;
+        private List<string> names;
+        Random random = new Random();
+
+        public Customer(string name, int customer, List<string> names)
+        {
+            
+        }
     }
 }
