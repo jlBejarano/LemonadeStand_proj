@@ -14,8 +14,8 @@ namespace LemonadeStandGame
         Random random = new Random();
         public Day()
         {
-            customer = new Customer();
-            weather = new Weather();
+            //customer = new Customer();
+            //weather = new Weather();
         }
 
     }

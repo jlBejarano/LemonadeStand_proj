@@ -12,6 +12,7 @@ namespace LemonadeStandGame
         public int quantityOfLemons;
         public int quantityOfIceCubes;
         public int quantityOfSugarCubes;
+        public int getUserInputDouble;
 
         public Recipe()
         {

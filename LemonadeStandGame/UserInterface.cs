@@ -12,6 +12,7 @@ namespace LemonadeStandGame
         {
             bool userInputIsAnInteger = false;
             int quantityOfItem = -1;
+            
 
             while (!userInputIsAnInteger || quantityOfItem < 0)
             {

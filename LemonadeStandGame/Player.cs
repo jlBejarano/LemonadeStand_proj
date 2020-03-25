@@ -21,6 +21,14 @@ namespace LemonadeStandGame
             wallet = new Wallet();
             pitcher = new Pitcher();
         }
+
+        public void DisplayInventory()
+        {
+            Console.WriteLine($"You have {inventory.cups.Count} lasting");
+            Console.WriteLine($"You have {inventory.lemons.Count} lasting");
+            Console.WriteLine($"You have { inventory.iceCubes.Count} lasting");
+            Console.WriteLine($"You have {inventory.sugarCubes.Count} lasting");
+        }
     }
 
     
