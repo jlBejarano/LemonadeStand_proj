@@ -15,7 +15,8 @@ namespace LemonadeStandGame
 
         public Customer(string name, int customer, List<string> names)
         {
-            
+           customer =  random.Next(customer.Count);
+            return customer;
         }
     }
 }

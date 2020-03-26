@@ -22,7 +22,22 @@ namespace LemonadeStandGame
 
         public void SetDays()
         {
+            for (int i = 0; i < 7; i++)
+            {
+                days.Add(new Day());
+            }
+        }
 
+        public void GameMenu()
+        {
+            int userInput;
+
+            for ()
+            {
+                Console.WriteLine("Pick an option:");
+                Console.WriteLine("Check inventory, go to store, make recipe, select current day, choose weather");
+                
+            }
         }
 
 

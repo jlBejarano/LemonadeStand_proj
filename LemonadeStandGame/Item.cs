@@ -6,13 +6,30 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame
 {
-    abstract class Item
+    class Item
     {
         public string name;
+        public double cost;
+        public double quantity;
 
-        static Item()
+        public Item(string name, double cost, double quantity)
         {
-
+            this.name = name;
+            this.cost = cost;
+            this.quantity = 0;
         }
+
+        public void HigherQuantity(double quantity)
+        {
+            if (quantity > 0)
+            {
+                this.quantity += quantity;
+            }
+        }
+
+       
+        
+            
+        
     }
 }
