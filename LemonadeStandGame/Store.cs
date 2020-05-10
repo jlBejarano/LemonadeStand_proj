@@ -18,7 +18,7 @@ namespace LemonadeStandGame
             pricePerCup = .10;
             pricePerLemon = .10;
             pricePerIceCube = .01;
-            pricePerSugarCube = .10;
+            pricePerSugarCube = .01;
         }
 
         public void SellCups(Player player)

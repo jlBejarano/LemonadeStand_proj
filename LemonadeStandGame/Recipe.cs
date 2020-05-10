@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame
 {
-    class Recipe
+    public class Recipe
     {
-        public double pricePerCup;
-        public int quantityOfLemons;
-        public int quantityOfIceCubes;
-        public int quantityOfSugarCubes;
-        public int getUserInputDouble;
+        public int pricePerCup;
+        public double quantityOfLemons;
+        public double quantityOfIceCubes;
+        public double quantityOfSugarCubes;
 
         public Recipe()
         {
-            pricePerCup = .20;
+            pricePerCup = 0;
             quantityOfLemons = 10;
             quantityOfIceCubes = 4;
             quantityOfSugarCubes = 6;
@@ -24,11 +23,12 @@ namespace LemonadeStandGame
 
         public void MakeRecipe()
         {
-            pricePerCup = UserInterface.GetUserInputDouble("How many cups would you like to have");
-            quantityOfLemons = UserInterface.GetUserInputInt("Amount of lemons you would like");
-            quantityOfIceCubes = UserInterface.GetUserInputInt("Amount of ice cubes you would like");
-            quantityOfSugarCubes = UserInterface.GetUserInputInt("Amount of sugar cubes you would like");
+            Console.WriteLine("Please make your recipe for your lemonade stand.How many sugar cubes?");
+            quantityOfSugarCubes = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("How many lemons?");
+            quantityOfLemons = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("How many ice cubes?(Choose a number)");
+            quantityOfIceCubes = Convert.ToDouble(Console.ReadLine());
         }
-
     }
 }

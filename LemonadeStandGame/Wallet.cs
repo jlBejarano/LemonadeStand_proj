@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame
 {
-    class Wallet
+    public class Wallet
     {
         private double money;
 
@@ -26,6 +26,11 @@ namespace LemonadeStandGame
         public void PayMoneyForItems(double transactionAmount)
         {
             money = transactionAmount;
+        }
+
+        public void MoneyFromCupsSold(double pricePerCup)
+        {
+            money += pricePerCup;
         }
 
 

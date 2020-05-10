@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame
 {
-    class Weather
+    public class Weather
     {
-        //public string weatherAtmosphere;
+      
         public string weatherCondition;
         public int weatherTempurature;
         Random random = new Random();
@@ -21,43 +21,40 @@ namespace LemonadeStandGame
             weatherReport.Add("Sunny");
             weatherReport.Add("Cloudy");
             weatherReport.Add("Thunderstorm");
-            GenerateRandomweatherCondition();
-            GenerateRandomweatherTempurature();
-
-
+            
         }
 
-        
+        public Weather()
+        {
+            RandomCondition();
+            RandomTempurature();
+        }
 
-            //public string WeatherCondition { get { return weatherCondition; } set { weatherCondition = value; } }
-            //public int WeatherTempurature { get { return WeatherTempurature; } set { weatherTempurature = value; } }
-
-
-        public string GenerateRandomweatherCondition()
+        private string RandomCondition()
         {
             weatherCondition = weatherConditions[random.Next(weatherConditions.Count)];
             return weatherCondition;
         }
-
-        public void GenerateRandomweatherTempurature()
+        private void RandomTempurature()
         {
             if (weatherCondition == "Rain")
             {
-                weatherTempurature = random.Next(70, 85);
+                weatherTempurature = random.Next(75, 65);
             }
-            else if (weatherCondition == "Sunny")
+            else if(weatherCondition == "Sunny")
             {
-                weatherTempurature = random.Next(95, 80);
+                weatherTempurature = random.Next(95, 100);
             }
-            else if (weatherCondition == "Cloudy")
+            else if(weatherCondition == "Cloudy")
             {
-                weatherTempurature = random.Next(75, 85);
+                weatherTempurature = random.Next(80, 85);
             }
-            else if (weatherCondition == "Thunderstorm")
+            else if(weatherCondition == "Thunderstorm")
             {
                 weatherTempurature = random.Next(60, 70);
             }
         }
+
     }
 } 
         

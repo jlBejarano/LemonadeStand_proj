@@ -6,17 +6,32 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame
 {
-    class Customer
+    public class Customer
     {
         public string name;
         public int customers;
         private List<string> names;
         Random random = new Random();
 
-        public Customer(string name, int customer, List<string> names)
+        public Customer(List<string> names, int customers)
         {
-           customer =  random.Next(customer.Count);
-            return customer;
+            
         }
+
+        public bool MakeChoice()
+        {
+            int chanceNumber = 0;
+            if(chanceNumber >= 5)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+
     }
 }

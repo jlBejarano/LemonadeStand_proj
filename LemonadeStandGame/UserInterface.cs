@@ -8,11 +8,11 @@ namespace LemonadeStandGame
 {
     static class UserInterface
     {
+        
         public static int GetNumberOfItems(string itemsToGet)
         {
             bool userInputIsAnInteger = false;
             int quantityOfItem = -1;
-            bool userInputDouble = false;
 
             while (!userInputIsAnInteger || quantityOfItem < 0)
             {

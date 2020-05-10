@@ -6,8 +6,19 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame
 {
-    class Pitcher
+    public class Pitcher
     {
+        public int remainingCups;
+
+        public Pitcher()
+        {
+            remainingCups = 10;
+        }
 
     }
+
+    
+    
+
+    
 }

@@ -6,18 +6,23 @@ using System.Threading.Tasks;
 
 namespace LemonadeStandGame
 {
-    class Game
+    public class Game
     {
-        private Player player;
+        Player player;
         private List<Day> days;
         private int currentDay;
+        Random random = new Random();
+        public int userInput;
+        Store store;
 
         public Game()
         {
             player = new Player();
             days = new List<Day>();
+            store = new Store();
             currentDay = 0;
             SetDays();
+            
         }
 
         public void SetDays()
@@ -30,14 +35,28 @@ namespace LemonadeStandGame
 
         public void GameMenu()
         {
-            int userInput;
-
-            for ()
+            Console.WriteLine("Pick an option");
+            switch (userInput)
             {
-                Console.WriteLine("Pick an option:");
-                Console.WriteLine("Check inventory, go to store, make recipe, select current day, choose weather");
-                
+                case 1:
+                    UserInterface.PlayerInventory(player.inventory, player.wallet);
+                    break;
             }
+
+            
+            
+                
+             
+                
+            
+        }
+
+        public void RunGame()
+        {
+            DisplayRules();
+            Console.ReadLine();
+            Console.WriteLine("Welcome to Lemonade Stand");
+            Console.ReadLine();
         }
 
 
