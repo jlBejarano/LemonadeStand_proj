@@ -36,25 +36,13 @@ namespace LemonadeStandGame
         public void GameMenu()
         {
             Console.WriteLine("Pick an option");
-            switch (userInput)
-            {
-                case 1:
-                    UserInterface.PlayerInventory(player.inventory, player.wallet);
-                    break;
-            }
-
-            
-            
-                
-             
-                
+              
             
         }
 
         public void RunGame()
         {
-            DisplayRules();
-            Console.ReadLine();
+           
             Console.WriteLine("Welcome to Lemonade Stand");
             Console.ReadLine();
         }
