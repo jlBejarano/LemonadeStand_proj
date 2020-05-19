@@ -8,28 +8,26 @@ namespace LemonadeStandGame
 {
     public class Customer
     {
-        public string name;
-        public int customers;
-        private List<string> names;
-        Random random = new Random();
+        public List <string> names;
+        string name;
 
-        public Customer(List<string> names, int customers)
+        public Customer()
         {
+            for(int i = 0; i<20; i++)
+            {
+                names.Add("Customer" + i);
+            }
+        }
+
+       
+
+        
+        
             
-        }
+        
 
-        public bool MakeChoice()
-        {
-            int chanceNumber = 0;
-            if(chanceNumber >= 5)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+   
+        
 
 
 

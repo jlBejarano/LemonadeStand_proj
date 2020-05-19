@@ -22,7 +22,7 @@ namespace LemonadeStandGame
             store = new Store();
             currentDay = 0;
             SetDays();
-            
+
         }
 
         public void SetDays()
@@ -36,15 +36,16 @@ namespace LemonadeStandGame
         public void GameMenu()
         {
             Console.WriteLine("Pick an option");
-              
-            
+            Console.WriteLine($"\);
+
         }
 
         public void RunGame()
         {
-           
+
             Console.WriteLine("Welcome to Lemonade Stand");
             Console.ReadLine();
+
         }
 
 
