@@ -17,14 +17,10 @@ namespace LemonadeStandGame
         public Day()
         {
             customers = new List<Customer>();
-            AddCustomers();
+
         }
 
-        private void AddCustomers()
-        {
-            throw new NotImplementedException();
-        }
-
+       
         private int NumberOfCustomers()
         {
             int numberOfCustomers = 0;

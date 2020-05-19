@@ -35,15 +35,15 @@ namespace LemonadeStandGame
 
         public void GameMenu()
         {
-            Console.WriteLine("Pick an option");
-            Console.WriteLine($"\);
+            Console.WriteLine("Enter option to start game");
+            Console.WriteLine($"\n1 Inventory \n2 Make recipe \n3 Store run \n4 Begin the day");
 
         }
 
         public void RunGame()
         {
 
-            Console.WriteLine("Welcome to Lemonade Stand");
+            Console.WriteLine("Welcome to The Lemonade Stand Game!");
             Console.ReadLine();
 
         }
