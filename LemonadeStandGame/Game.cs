@@ -33,6 +33,20 @@ namespace LemonadeStandGame
             }
         }
 
+        public void RunGame()
+        {
+            Console.WriteLine("Welcome to The Lemonade Stand Game!");
+            Console.ReadLine();
+        
+        }
+
+
+        public void DisplayRules()
+        {
+            Console.WriteLine("Game Instructions: \n Sell as many lemonade cups in 7, 14, or 30 days to make as much money as you can.");
+
+        }
+
         public void GameMenu()
         {
             Console.WriteLine("Enter option to start game");
@@ -40,13 +54,6 @@ namespace LemonadeStandGame
 
         }
 
-        public void RunGame()
-        {
-
-            Console.WriteLine("Welcome to The Lemonade Stand Game!");
-            Console.ReadLine();
-
-        }
 
 
 
