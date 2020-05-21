@@ -9,34 +9,34 @@ namespace LemonadeStandGame
     public class Game
     {
         Player player;
-        private List<Day> days;
-        private int currentDay;
         Random random = new Random();
-        public int userInput;
         Store store;
+        List<Day> Days;
+        int numberOfDays;
 
         public Game()
         {
             player = new Player();
-            days = new List<Day>();
             store = new Store();
-            currentDay = 0;
-            SetDays();
-
+            Days = new List<Day>();
+            numberOfDays = 0;
+         
         }
 
-        public void SetDays()
-        {
-            for (int i = 0; i < 7; i++)
-            {
-                days.Add(new Day());
-            }
-        }
 
         public void RunGame()
         {
             Console.WriteLine("Welcome to The Lemonade Stand Game!");
             Console.ReadLine();
+            CreatePlayer();
+            Console.WriteLine("To start day one press enter!");
+            Console.ReadLine();
+            for (int i = 1; i <= Days.Count; i++)
+            {
+                Weather weather = new Weather();
+                Console.WriteLine($"Day {i} of {numberOfDays}");
+                Console.WriteLine($"\nTempurature:{weather.weatherCondition}\n");
+            }
         
         }
 
@@ -45,6 +45,11 @@ namespace LemonadeStandGame
         {
             Console.WriteLine("Game Instructions: \n Sell as many lemonade cups in 7, 14, or 30 days to make as much money as you can.");
 
+        }
+        public void CreatePlayer()
+        {
+            Console.WriteLine("New player enter your name:");
+            Console.ReadLine();
         }
 
         public void GameMenu()
