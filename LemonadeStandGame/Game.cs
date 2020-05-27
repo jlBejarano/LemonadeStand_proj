@@ -36,7 +36,28 @@ namespace LemonadeStandGame
                 Weather weather = new Weather();
                 Console.WriteLine($"Day {i} of {numberOfDays}");
                 Console.WriteLine($"\nTempurature:{weather.weatherCondition}\n");
+                int days = 0;
+                do
+                {
+                    i++;
+                    if (player.wallet.Money >= 0.00)
+                    {
+                        GameMenu();
+                    }
+                    else
+                    {
+
+                    }
+                    Console.WriteLine("You have no more money!");
+
+                }
+                while (i <= 7);
+
+                Console.ReadLine();
             }
+            
+
+            
         
         }
 
