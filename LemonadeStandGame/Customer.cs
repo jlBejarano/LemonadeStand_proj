@@ -8,14 +8,21 @@ namespace LemonadeStandGame
 {
     public class Customer
     {
-        public List <string> names;
-        string name;
+        Random RandomGen;
+        
 
         public Customer()
         {
-            for(int i = 0; i<20; i++)
+            RandomGen = new Random();
+        }
+
+        public void CustomerPurchase(Weather weather, double price, Inventory inventory, Customer customer, bool decision)
+        {
+            int randomValueBetween0And99 = customer.RandomGen.Next(100);
+
+            if (weather.weatherCondition == "Sunny")
             {
-                names.Add("Customer" + i);
+
             }
         }
 
