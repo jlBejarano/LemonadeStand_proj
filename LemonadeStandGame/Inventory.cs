@@ -59,6 +59,11 @@ namespace LemonadeStandGame
             }
         }
 
+        public void DisplayInventory()
+        {
+            Console.WriteLine($"Lemons:{lemons.Count}\nCups:{cups.Count}\nIce Cubes:{iceCubes.Count}\nSugar Cubes:{sugarCubes.Count}\n");
+        }
+
 
 
     }

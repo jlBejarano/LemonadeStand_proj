@@ -25,12 +25,12 @@ namespace LemonadeStandGame
 
         public void PayMoneyForItems(double transactionAmount)
         {
-            money = transactionAmount;
+            money = Math.Round(transactionAmount, 2);
         }
 
-        public void MoneyFromCupsSold(double pricePerCup)
+        public void DisplayAmountOfMoney()
         {
-            money += pricePerCup;
+            Console.WriteLine($"Customer you have ${money} and \n");
         }
 
 

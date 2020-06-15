@@ -8,18 +8,25 @@ namespace LemonadeStandGame
 {
     public class Game
     {
-        Player player;
+        Player newPlayer;
         Random random = new Random();
+        Customer customer;
+        List<Customer> Customers;
         Store store;
         List<Day> Days;
         int numberOfDays;
+        double priceOfLemonade;
+        string decideToPurchase;
 
         public Game()
         {
-            player = new Player();
+           
             store = new Store();
             Days = new List<Day>();
             numberOfDays = 0;
+            customer = new Customer();
+            Customers = new List<Customer>();
+            
          
         }
 
@@ -33,35 +40,25 @@ namespace LemonadeStandGame
             Console.ReadLine();
             for (int i = 1; i <= Days.Count; i++)
             {
+                Createcustomers();
                 Weather weather = new Weather();
+                newPlayer.inventory.DisplayInventory();
+                newPlayer.wallet.DisplayAmountOfMoney();
+                decideToPurchase = null;
                 Console.WriteLine($"Day {i} of {numberOfDays}");
                 Console.WriteLine($"\nTempurature:{weather.weatherCondition}\n");
-                int days = 0;
-                do
-                {
-                    i++;
-                    if (player.wallet.Money >= 0.00)
-                    {
-                        GameMenu();
-                    }
-                    else
-                    {
-
-                    }
-                    Console.WriteLine("You have no more money!");
-
-                }
-                while (i <= 7);
-
-                Console.ReadLine();
-            }
-            
-
-            
-        
+                newPlayer.inventory.iceCubes.Clear();
+                Console.WriteLine("\nPress enter to start the next day."); ;
+            }   
         }
 
+       
 
+        public void ChoosePriceOfLemonade()
+        {
+            Console.WriteLine("Enter price for lemonade cups");
+            priceOfLemonade = Convert.ToDouble(Console.ReadLine());
+        }
         public void DisplayRules()
         {
             Console.WriteLine("Game Instructions: \n Sell as many lemonade cups in 7, 14, or 30 days to make as much money as you can.");
@@ -79,7 +76,16 @@ namespace LemonadeStandGame
             Console.WriteLine($"\n1 Inventory \n2 Make recipe \n3 Store run \n4 Begin the day");
 
         }
+       
 
+        public void Createcustomers()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                Customer customer = new Customer();
+                Customers.Add(customer);
+            }
+        }
 
 
 
